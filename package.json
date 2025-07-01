@@ -4,10 +4,6 @@
   "scripts": {
     "test": "jest"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/mendoul/daily-algos.git"
-  },
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^22.5.5"
