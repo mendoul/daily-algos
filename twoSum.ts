@@ -18,15 +18,29 @@
 // Output: [0,1]
 
 // create a function twoSum that accapts an array and a target number
-const twoSum = (array: number[], target: number): number[] | undefined => {
-  // iterate through function
+// const twoSum = (array: number[], target: number): number[] | undefined => {
+//   // iterate through function
+//   for (let i = 0; i < array.length; i++) {
+//     // nested iteration
+//     for (let j = i + 1; j < array.length; j++) {
+//       // if the target equals both num return the indices
+//       if (array[i] + array[j] === target) return [i, j];
+//     };
+//   };  
+// };
+
+// create finction twoSum that accepts a array and target
+const twoSum = (array: number[], target: number): undefined | number[] => {
+  // create map
+  const map = new Map<number, number>();
+  // iterate through the array
   for (let i = 0; i < array.length; i++) {
-    // nested iteration
-    for (let j = i + 1; j < array.length; j++) {
-      // if the target equals both num return the indices
-      if (array[i] + array[j] === target) return [i, j];
-    };
+    // create variable compliment
+    const complement = target - array[i];
+    // if the map has the complement return the indices
+    if (map.has(complement)) return [map.get(complement)!, i];
+    // if not set the map
+    map.set(array[i], i);
   };  
 };
-
 console.log(twoSum([3,3], 6)); // Output: [0, 1]
