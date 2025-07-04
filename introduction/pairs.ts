@@ -26,5 +26,3 @@ const pairs = <T>(arr: T[]): [T, T][] => {
   // return result array
   return result;  
 };
-
-console.log(pairs(["a", "b", "c"]))
