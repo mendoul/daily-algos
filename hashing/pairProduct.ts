@@ -8,7 +8,7 @@
 // pairProduct([3, 2, 5, 4, 1], 10); // -> [1, 2]
 // pairProduct([4, 6, 8, 2], 16); // -> [2, 3]
 
-//input: [3, 2, 5, 4, 1], 8
+// input: [3, 2, 5, 4, 1], 8
 // output: [1, 3]
 
 // create a function pairProduct that accepts a array and a target number
