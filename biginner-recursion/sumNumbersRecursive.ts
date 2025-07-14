@@ -25,5 +25,3 @@ const sumNumbersRecursive = (arr: number[], sum: number = 0): number => {
   // return function passing in array and sum
   return sumNumbersRecursive(arr.slice(1), sum += arr[0]);
 };
-
-console.log(sumNumbersRecursive([5, 2, 9, 10]))
