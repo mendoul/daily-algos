@@ -23,26 +23,26 @@ c.next = d;
 // input: a -> b -> c -> d
 // output: d -> c -> b -> a
 
-// // create a function a function that accepts a head node
-// const reverseList = (head: Node): Node => {
-//   // create a variable current set to head
-//   let current = head;
-//   // create a variable previous set to null
-//   let previous = null;
-//   // iterate through the nodes using a while loop
-//   while (current) {
-//   // create a next varibale and set to currents next
-//   const next = current.next;  
-//   // reasign currents next to the previous
-//   current.next = previous;  
-//   // reasign previous to the current
-//   previous = current;  
-//   // reasign current to the next
-//   current = next;
-//   };  
-//   // return the previous
-//   return previous;
-// };  
+// create a function a function that accepts a head node
+const reverseList = (head: Node): Node => {
+  // create a variable current set to head
+  let current = head;
+  // create a variable previous set to null
+  let previous = null;
+  // iterate through the nodes using a while loop
+  while (current) {
+  // create a next varibale and set to currents next
+  const next = current.next;  
+  // reasign currents next to the previous
+  current.next = previous;  
+  // reasign previous to the current
+  previous = current;  
+  // reasign current to the next
+  current = next;
+  };  
+  // return the previous
+  return previous;
+};  
 
 // create a function that accepts a head node and a previous as default param
 const reverseList = (head: Node, prev: null | Node = null): Node => {
