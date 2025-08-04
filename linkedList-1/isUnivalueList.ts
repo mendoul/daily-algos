@@ -21,22 +21,22 @@ b.next = c;
 // input: 7 -> 7 -> 7
 // output: true
 
-// // create a fuhnction that accepts a head
-// const isUnivalueList = (head: Node): boolean => {
-//   // create a headval and set the heads val
-//   const headVal = head.val;
-//   // create a current
-//   let current = head.next;
-//   // iterate through current and check if its value is same as headsval
-//   while (current) {
-//     // if not return false
-//     if (current.val !== headVal) return false;
-//     // reassign current
-//     current = current.next;
-//   }
-//   // if yes return true
-//   return true;
-// };  
+// create a fuhnction that accepts a head
+const isUnivalueList = (head: Node): boolean => {
+  // create a headval and set the heads val
+  const headVal = head.val;
+  // create a current
+  let current = head.next;
+  // iterate through current and check if its value is same as headsval
+  while (current) {
+    // if not return false
+    if (current.val !== headVal) return false;
+    // reassign current
+    current = current.next;
+  }
+  // if yes return true
+  return true;
+};  
 
 // create a function that accepts a head and heads val
 const isUnivalueList = (head: Node, val: number = head.val): boolean => {
