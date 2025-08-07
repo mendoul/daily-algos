@@ -26,7 +26,7 @@ b.right = e;
 c.right = f;
 
 // input: root
-// output: [a, b, c, d, e, f]
+// output: [a, b, d, e, c, f]
 
 // create a function that accepts a root
 const depthFirstValues = (root: Node) => {  
@@ -38,17 +38,18 @@ const depthFirstValues = (root: Node) => {
   // iterate through the tree
   while (stack.length > 0) {
     // pop value from stack and add to values
-    const node = stack.shift();
+    const node = stack.pop();
     // add values to array
     values.push(node.val);
-    // if left exists push into stack
-    if (node.left) stack.push(node.left);
     // if right exist push into stack
     if (node.right) stack.push(node.right);
+    // if left exists push into stack
+    if (node.left) stack.push(node.left);
   };  
   // return values
   return values;
 };  
+
 
 // create a function depthFirstValues that accepts a root
 const depthFirstValues = (root: Node): string[] => { 
