@@ -31,6 +31,8 @@ c.right = f;
 
 // create a function that accepts a root
 const breadthFirstValues = (root: Node): string[] => {
+  // if no root return empty array
+  if (!root) return [];
   // create a values array
   const values = [];
   // create a queue array assign to root
